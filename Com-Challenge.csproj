@@ -6,4 +6,7 @@
     <RootNamespace>Com_Challenge</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Json.Net" Version="1.0.18" />
+  </ItemGroup>
 </Project>

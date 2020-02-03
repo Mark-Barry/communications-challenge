@@ -1,29 +1,33 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using Json.Net;
+
 namespace Com_Challenge.src
 {
     public class JSONHandler
     {
         public static void FileReader(string filename, object type)
         {
-
+            using (StreamReader r = new StreamReader(filename))
+            {
+                string json = r.ReadToEnd();
+                List<type> items = JsonConverter.DeserializeObject<List<type>>(json);
+            }
         }
 
-        public static void ReplaceJsonValue()
+        public static void FileWriter(string filename, object obj)
         {
-            string filepath = "../../json1.json";
-            string result = string.Empty;
-            using (StreamReader r = new StreamReader(filepath))
+
+            // serialize JSON to a string and then write string to a file
+            File.WriteAllText(filename, JsonConverter.SerializeObject(obj));
+
+            // serialize JSON directly to a file
+            using (StreamWriter file = File.CreateText(filename))
             {
-                var json = r.ReadToEnd();
-                var jobj = JObject.Parse(json);
-                foreach (var item in jobj.Properties())
-                {
-                    item.Value = item.Value.ToString().Replace("v1", "v2");
-                }
-                result = jobj.ToString();
-                Console.WriteLine(result);
+                JsonSerializer serializer = new JsonSerializer();
+                serializer.Serialize(file, (Json.Net.SerializationOptions)obj);
             }
-            File.WriteAllText(filepath, result);
         }
     }
 }
