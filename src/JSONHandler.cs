@@ -1,33 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using Json.Net;
+using Newtonsoft.Json;
 
 namespace Com_Challenge.src
 {
     public class JSONHandler
     {
-        public static void FileReader(string filename, object type)
+        public static List<object> FileReader(string filename, List<object> type)
         {
             using (StreamReader r = new StreamReader(filename))
             {
                 string json = r.ReadToEnd();
-                List<type> items = JsonConverter.DeserializeObject<List<type>>(json);
+                var items = JsonConvert.DeserializeObject<List<object>>(json);
+                return items;
             }
         }
 
-        public static void FileWriter(string filename, object obj)
+        public static void FileWriter(string filename, List<object> obj)
         {
 
-            // serialize JSON to a string and then write string to a file
-            File.WriteAllText(filename, JsonConverter.SerializeObject(obj));
+            string json = JsonConvert.SerializeObject(obj.ToArray());
 
-            // serialize JSON directly to a file
-            using (StreamWriter file = File.CreateText(filename))
-            {
-                JsonSerializer serializer = new JsonSerializer();
-                serializer.Serialize(file, (Json.Net.SerializationOptions)obj);
-            }
+            //write string to file
+            System.IO.File.WriteAllText(filename, json);
         }
     }
 }
