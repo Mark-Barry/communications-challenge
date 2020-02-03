@@ -20,9 +20,9 @@ namespace Com_Challenge
             string filename = @"C:\Users\Administrator1\Desktop\challenge\players.txt";
             var players = new List<Player>();
             Player player1 = new Player();
-            player1.name = "Player1";
+            player1.SetName("Player1");
             Player player2 = new Player();
-            player2.name = "Player2";
+            player2.SetName("Player2");
             players.Add(player1);
             players.Add(player2);
             JSONHandler<Player>.FileWriter(filename,players);
@@ -31,7 +31,7 @@ namespace Com_Challenge
             readPlayers = JSONHandler<Player>.FileReader(filename);
             for (int i = 0; i < readPlayers.Count; i++)
             {
-                Console.WriteLine(readPlayers[i].name);
+                Console.WriteLine(readPlayers[i].GetName());
             }
         }
     }
