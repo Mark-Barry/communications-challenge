@@ -5,19 +5,19 @@ using Newtonsoft.Json;
 
 namespace Com_Challenge.src
 {
-    public class JSONHandler
+    public class JSONHandler<T>
     {
-        public static List<object> FileReader(string filename, List<object> type)
+        public static List<T> FileReader(string filename)
         {
             using (StreamReader r = new StreamReader(filename))
             {
                 string json = r.ReadToEnd();
-                var items = JsonConvert.DeserializeObject<List<object>>(json);
+                var items = JsonConvert.DeserializeObject<List<T>>(json);
                 return items;
             }
         }
 
-        public static void FileWriter(string filename, List<object> obj)
+        public static void FileWriter(string filename, List<T> obj)
         {
 
             string json = JsonConvert.SerializeObject(obj.ToArray());

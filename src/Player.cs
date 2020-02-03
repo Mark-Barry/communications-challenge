@@ -4,10 +4,10 @@ using System.Text;
 
 namespace Com_Challenge.Classes.Character
 {
-    class Player
+    public class Player
     {
-        string name;
-        string gender;
-        int health;
+        public string name;
+        public string gender;
+        public int health;
     }
 }

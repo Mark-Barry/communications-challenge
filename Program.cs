@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Com_Challenge.Classes.Character;
+using Com_Challenge.src;
+using System;
+using System.Collections.Generic;
 
 namespace Com_Challenge
 {
@@ -7,6 +10,29 @@ namespace Com_Challenge
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            var rooms = new List<Room>();
+            rooms = JSONHandler<Room>.FileReader(@"C:\Users\Administrator1\Desktop\challenge\rooms.txt");
+            for (int i = 0; i < rooms.Count; i++)
+            {
+                Console.WriteLine(rooms[i].Name);
+            }
+
+            string filename = @"C:\Users\Administrator1\Desktop\challenge\players.txt";
+            var players = new List<Player>();
+            Player player1 = new Player();
+            player1.name = "Player1";
+            Player player2 = new Player();
+            player2.name = "Player2";
+            players.Add(player1);
+            players.Add(player2);
+            JSONHandler<Player>.FileWriter(filename,players);
+
+            var readPlayers = new List<Player>();
+            readPlayers = JSONHandler<Player>.FileReader(filename);
+            for (int i = 0; i < readPlayers.Count; i++)
+            {
+                Console.WriteLine(readPlayers[i].name);
+            }
         }
     }
 }
