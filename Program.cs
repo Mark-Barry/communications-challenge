@@ -1,6 +1,6 @@
 ﻿using System;
-using
 using Com_Challenge.Classes.Character;
+using Com_Challenge.src;
 
 namespace Com_Challenge
 {
@@ -10,10 +10,14 @@ namespace Com_Challenge
         {
             Console.WriteLine("Hello World!");
 
-            Player plyr = new Player();
-            plyr.name = "bryan";
-            plyr.gender = "male";
-            plyr.health = "100";
+            Player plyr = new Player
+            {
+                name = "bryan",
+                gender = "male",
+                health = 100
+            };
+
+            JSONHandler.FileWriter("test.json", plyr);
         }
     }
 }
