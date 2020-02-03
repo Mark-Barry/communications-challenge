@@ -6,6 +6,10 @@ namespace Com_Challenge.Classes.Character
 {
     class Player
     {
+        private string name;
+        private string gender;
+        private int health;
+       
 
         public Player(string name, string gender, int health)
         {
