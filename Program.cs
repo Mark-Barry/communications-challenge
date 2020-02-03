@@ -8,16 +8,7 @@ namespace Com_Challenge
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
 
-            Player plyr = new Player
-            {
-                name = "bryan",
-                gender = "male",
-                health = 100
-            };
-
-            JSONHandler.FileWriter("test.json", plyr);
         }
     }
 }
