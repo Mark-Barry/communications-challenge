@@ -1,5 +1,6 @@
 ﻿using Com_Challenge.Classes.Character;
 using Com_Challenge.src;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
@@ -12,12 +13,13 @@ namespace Com_Challenge
             var rooms = new List<Room>();
             PlayerInput input = new PlayerInput();
 
+            input.directionInput();
+
             Console.WriteLine("Please, enter a file path and name that contains the Room objects: ");
             rooms = JSONHandler<Room>.FileReader(@"C:\Users\Administrator1\Desktop\challenge\rooms.txt");
             for (int i = 0; i < rooms.Count; i++)
             {
                 Console.WriteLine(rooms[i].Name);
-                input.directionInput();
             }
 
             string filename = @"C:\Users\Administrator1\Desktop\challenge\players1.txt";
@@ -36,7 +38,7 @@ namespace Com_Challenge
             {
                 Console.WriteLine(readAdventures[i].Name);
                 Console.WriteLine(readAdventures[i].Description);
-                for (int j = 0; j < readAdventures[i].RoomIds.Count; j++)
+                for (int j = 0; j < readAdventures[i].RoomIds.ToArray().Length; j++)
                 {
                     Console.WriteLine(readAdventures[i].RoomIds[j]);
                 }

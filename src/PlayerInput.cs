@@ -16,9 +16,9 @@ namespace Com_Challenge.src
             Console.WriteLine("Enter a Direction");
             string direction = Console.ReadLine();
             direction.ToLower();
-            foreach (string temp in InputList)
+            foreach (string element in InputList)
             {
-                myBool = inputs.Equals(temp);
+                myBool = element == direction;
                 if (myBool)
                     break;
             }
