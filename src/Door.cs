@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Com_Challenge.src
 {
-    class Doors
+    class Door
     {
         private bool isLocked;
         private string key;
