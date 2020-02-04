@@ -9,7 +9,11 @@ namespace Com_Challenge.Classes.Character
         private string name;
         private string gender;
         private int health;
-       
+
+        public string Name { get { return this.GetName(); } set { } }
+        public string Gender { get { return this.GetGender(); } set { } }
+        public int Health { get { return this.GetHealth(); } set { } }
+
 
         public Player(string name, string gender, int health)
         {
