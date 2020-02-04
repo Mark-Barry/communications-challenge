@@ -9,18 +9,20 @@ namespace Com_Challenge.Classes.Character
         private string name;
         private string gender;
         private int health;
+        private Inventory inventory;
+        
 
         public string Name { get { return this.GetName(); } set { this.SetName(Name); } }
         public string Gender { get { return this.GetGender(); } set { this.SetGender(Gender); } }
         public int Health { get { return this.GetHealth(); } set { this.SetHealth(Health); } }
 
 
-        public Player(string name, string gender, int health)
+        public Player(string name, string gender, int health, Inventory inventory)
         {
             this.name = name;
             this.gender = gender;
             this.health = health;
-
+            this.inventory = inventory;
         }
         //construstor 
         public Player()
