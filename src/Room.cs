@@ -7,15 +7,20 @@ public class Room
 {
     private string name;
     private string description;
-    private List<Room> ExitList;
+    private List<string> exitList;
     private string roomID;
 
-    public Room(string name, string description, List<Door> doorsList)
+    public string Name { get { return this.GetName(); } set { this.SetName(Name); } }
+    public string Description { get { return this.GetDescription(); } set { this.SetDescription(Description); } }
+    public List<string> ExitList { get { return this.GetExitList(); } set { this.SetExitList(ExitList); } }
+    public string RoomID { get { return this.GetRoomID(); } set { this.SetRoomID(RoomID); } }
+
+    public Room(string name, string description, List<string> exitList)
     {
         this.name = name;
         this.description = description;
-        this.ExitList = new List<Room>();
-        this.ExitList = ExitList;
+        this.exitList = new List<string>();
+        this.exitList = exitList;
     }
     //construter
     public Room()
@@ -31,7 +36,16 @@ public class Room
     {
         this.description = description;
     }
+
+    public void SetExitList(List<string> exitList)
+    {
+        this.exitList = exitList;
+    }
     
+    public void SetRoomID(string roomID)
+    {
+        this.roomID = roomID;
+    }
     //getters
     public string GetName()
     {
@@ -43,7 +57,15 @@ public class Room
         return this.description;
     }
 
+    public List<string> GetExitList()
+    {
+        return this.exitList;
+    }
 
+    public string GetRoomID()
+    {
+        return this.roomID;
+    }
 
 
 
