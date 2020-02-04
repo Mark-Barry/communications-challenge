@@ -6,13 +6,15 @@ using Com_Challenge.src;
 namespace Com_Challenge.Classes.Character
 {
     class Player
-    {
+    {   //verriables
         private string name;
         private string gender;
         private int health;
         private Inventory inventory;
-        
+        private string currenetLocation;
+        private string previousLocation;
 
+        //properties so jason can access the verriables 
         public string Name { get { return this.GetName(); } set { this.SetName(Name); } }
         public string Gender { get { return this.GetGender(); } set { this.SetGender(Gender); } }
         public int Health { get { return this.GetHealth(); } set { this.SetHealth(Health); } }
@@ -45,7 +47,15 @@ namespace Com_Challenge.Classes.Character
         {
             this.health = health;
         }
+        public void SetCurrenetLocation(string currenetLocation)
+        {
+            this.currenetLocation = currenetLocation;
+        }
 
+        public void SetPreviousLocation(string previousLocation)
+        {
+            this.previousLocation = previousLocation;
+        }
         //Getters 
         public string GetName()
         {
@@ -62,7 +72,17 @@ namespace Com_Challenge.Classes.Character
             return this.health;
         }
 
+        public string GetCurrenetLocation()
+        {
+            return this.currenetLocation;
+        }
 
+        public string GetPreviousLocation()
+        {
+            return this.previousLocation;
+        }
+
+        //print method for tesing 
         public void print()
         {
             Console.WriteLine("character: " + this.name + "/nGender: " + this.gender + "/nHealth: " + health + "./n");
