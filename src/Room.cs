@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collection.Generics;
 using System.Text;
+using Com_Challenge.src;
 
 
 public class Room
@@ -24,8 +25,8 @@ public class Room
     }
     //construter
     public Room()
-	{
-	}
+    {
+    }
     //setters 
     public void SetName(string name)
     {
@@ -41,7 +42,7 @@ public class Room
     {
         this.exitList = exitList;
     }
-    
+
     public void SetRoomID(string roomID)
     {
         this.roomID = roomID;
@@ -67,7 +68,5 @@ public class Room
         return this.roomID;
     }
 
-
-
-
+    
 }
