@@ -10,6 +10,7 @@ namespace Com_Challenge
         static void Main(string[] args)
         {
             var rooms = new List<Room>();
+            PlayerInput input = new PlayerInput();
 
             Console.WriteLine("Please, enter a file path and name that contains the Room objects: ");
             string roomsFileName = "@" + Console.ReadLine();
@@ -17,6 +18,7 @@ namespace Com_Challenge
             for (int i = 0; i < rooms.Count; i++)
             {
                 Console.WriteLine(rooms[i].Name);
+                input.directionInput();
             }
 
             string filename = @"C:\Users\Administrator1\Desktop\challenge\players.txt";
