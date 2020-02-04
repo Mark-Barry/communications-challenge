@@ -23,16 +23,17 @@ namespace Com_Challenge.src
 
         public string directionInput()
         {
-            Console.WriteLine("Exit options:");
+            Console.Write("Exit options:");
             foreach (var option in InputList)
             {
-                Console.Write(option);
+                Console.Write(" "+option);
             }
-            Console.WriteLine("Enter a Direction:");
+            Console.WriteLine();
+            Console.Write("Enter a Direction:");
             string direction = Console.ReadLine();
             direction.ToLower();
 
-            while (!InputList.Contains(direction))
+            while (!InputList.Contains(direction) && direction != "exit")
             {
                 Console.WriteLine("Incorrect input! Please, try again!");
                 Console.WriteLine("Enter a Direction:");

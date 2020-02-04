@@ -48,13 +48,26 @@ namespace Com_Challenge
             Player player = new Player();
             string location = player.currenetLocation;
             location = Rooms[0].roomID;
+            string previousLocation = player.previousLocation;
+            previousLocation = "";
             PlayerInput input = new PlayerInput();
             input.ResetInputList(Rooms[0].roomID, Rooms);
-            while (location != "win")
+            while (location != "exit")
             {
                 Console.WriteLine("You are currently in: " + location);
+                for (int i = 0; i < Rooms.Count; i++)
+                {
+                    if (Rooms[i].roomID == location)
+                    {
+                        Console.WriteLine(Rooms[i].description);
+                    }
+                }
                 input.ResetInputList(location, Rooms);
+                previousLocation = location;
                 location = input.directionInput();
+                Console.Clear();
+                Console.WriteLine("You just came from: " + previousLocation);
+
             }
             //MenuHandler menuHandler = new MenuHandler();
             //menuHandler.displayMenu();
