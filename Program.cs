@@ -13,15 +13,14 @@ namespace Com_Challenge
             PlayerInput input = new PlayerInput();
 
             Console.WriteLine("Please, enter a file path and name that contains the Room objects: ");
-            string roomsFileName = "@" + Console.ReadLine();
-            rooms = JSONHandler<Room>.FileReader(roomsFileName);
+            rooms = JSONHandler<Room>.FileReader(@"C:\Users\Administrator1\Desktop\challenge\rooms.txt");
             for (int i = 0; i < rooms.Count; i++)
             {
                 Console.WriteLine(rooms[i].Name);
                 input.directionInput();
             }
 
-            string filename = @"C:\Users\Administrator1\Desktop\challenge\players.txt";
+            string filename = @"C:\Users\Administrator1\Desktop\challenge\players1.txt";
             var players = new List<Player>();
             Player player1 = new Player();
             player1.SetName("Player1");
