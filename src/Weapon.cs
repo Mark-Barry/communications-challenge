@@ -7,7 +7,9 @@ namespace Com_Challenge.src
     class Weapon
     {
         private string name;
+        public string Name { get { return this.GetName(); } }
         private int damage;
+        public int Damage { get { return this.GetDamage(); } }
 
         public Weapon(string name, int damage)
         {
