@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Com_Challenge.src
 {
-    class RoomHandler
+    public class RoomHandler
     {
         public List<Room> GetRooms(string filename)
         {
