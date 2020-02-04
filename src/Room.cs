@@ -4,12 +4,13 @@ using Com_Challenge.src;
 
 
 public class Room
-{
+{   //verriables 
     private string name;
     private string description;
     private List<string> exitList;
     private string roomID;
 
+    //properties so jason can access the verriables 
     public string Name { get { return this.GetName(); } set { this.SetName(Name); } }
     public string Description { get { return this.GetDescription(); } set { this.SetDescription(Description); } }
     public List<string> ExitList { get { return this.GetExitList(); } set { this.SetExitList(ExitList); } }
@@ -46,6 +47,7 @@ public class Room
     {
         this.roomID = roomID;
     }
+   
     //getters
     public string GetName()
     {

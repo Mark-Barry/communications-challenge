@@ -6,37 +6,40 @@ namespace Com_Challenge.src
 {
     class PlayerInput
     {
-        bool myBool = false;
-        string[] inputs = { "north", "south", "east", "west", "n", "s", "e", "w" };
-        List<string> InputList = new List<string> { "north", "south", "east", "west", "n", "s", "e", "w" };
+        List<string> InputList = new List<string>();
 
 
-        public void directionInput()
+        public void ResetInputList(string roomId, List<Room> rooms)
         {
-            Console.WriteLine("Enter a Direction");
-            string direction = Console.ReadLine();
-            direction.ToLower();
-            foreach (string element in InputList)
+            foreach (var room in rooms)
             {
-                myBool = element == direction;
-                if (myBool)
+                if (room.GetRoomID() == roomId)
+                {
+                    InputList = room.GetExitList();
                     break;
+                }
             }
-
-            if (myBool)
-                Console.Write("In array");
-            else
-                Console.Write("Not in array");
-                Console.ReadLine();
-
         }
 
-        //static void Main(string[] args)
-        //{
-        //    PlayerInput input = new PlayerInput();
-        //    input.directionInput();
-        //}
+        public string directionInput()
+        {
+            Console.WriteLine("Exit options:");
+            foreach (var option in InputList)
+            {
+                Console.Write(option);
+            }
+            Console.WriteLine("Enter a Direction:");
+            string direction = Console.ReadLine();
+            direction.ToLower();
 
+            while (!InputList.Contains(direction))
+            {
+                Console.WriteLine("Incorrect input! Please, try again!");
+                Console.WriteLine("Enter a Direction:");
+                direction = Console.ReadLine();
+            }
+            return direction;
+        }
     }
 }   
 
