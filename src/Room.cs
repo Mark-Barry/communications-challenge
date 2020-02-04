@@ -1,73 +1,22 @@
 ﻿using System;
-using System.Collection.Generics;
-using System.Text;
-
+using System.Collections.Generic;
+using Com_Challenge.src;
 
 public class Room
 {
-    private string name;
-    private string description;
-    private List<string> exitList;
-    private string roomID;
 
-    public string Name { get { return this.GetName(); } set { this.SetName(Name); } }
-    public string Description { get { return this.GetDescription(); } set { this.SetDescription(Description); } }
-    public List<string> ExitList { get { return this.GetExitList(); } set { this.SetExitList(ExitList); } }
-    public string RoomID { get { return this.GetRoomID(); } set { this.SetRoomID(RoomID); } }
+    public string Name { get; set; }
+    public string Description { get; set; }
+    public string Clue { get; set; }
+    public string Key { get; set; } 
+    public List<Door> DoorList;
 
-    public Room(string name, string description, List<string> exitList)
+    public Room(string name, string description, string clue, string key)
     {
-        this.name = name;
-        this.description = description;
-        this.exitList = new List<string>();
-        this.exitList = exitList;
+        this.Name = name;
+        this.Description = description;
+        this.Clue = clue;
+        this.Key = key;
+        DoorList = new List<Door>();
     }
-    //construter
-    public Room()
-	{
-	}
-    //setters 
-    public void SetName(string name)
-    {
-        this.name = name;
-    }
-
-    public void SetDescription(string description)
-    {
-        this.description = description;
-    }
-
-    public void SetExitList(List<string> exitList)
-    {
-        this.exitList = exitList;
-    }
-    
-    public void SetRoomID(string roomID)
-    {
-        this.roomID = roomID;
-    }
-    //getters
-    public string GetName()
-    {
-        return this.name;
-    }
-
-    public string GetDescription()
-    {
-        return this.description;
-    }
-
-    public List<string> GetExitList()
-    {
-        return this.exitList;
-    }
-
-    public string GetRoomID()
-    {
-        return this.roomID;
-    }
-
-
-
-
 }
