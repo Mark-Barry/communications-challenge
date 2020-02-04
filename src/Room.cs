@@ -1,13 +1,5 @@
 ﻿using System;
-<<<<<<< HEAD
 using System.Collections.Generic;
-using Com_Challenge.src;
-
-public class Room
-{
-=======
-using System.Collection.Generics;
-using System.Text;
 using Com_Challenge.src;
 
 
@@ -59,30 +51,4 @@ public class Room
     {
         return this.name;
     }
->>>>>>> caf5eea39c66689ec54811dd8796c5865f340cde
-
-    public string Name { get; set; }
-    public string Description { get; set; }
-    public string Clue { get; set; }
-    public string Key { get; set; } 
-    public List<Door> DoorList;
-
-    public Room(string name, string description, string clue, string key)
-    {
-        this.Name = name;
-        this.Description = description;
-        this.Clue = clue;
-        this.Key = key;
-        DoorList = new List<Door>();
-    }
-<<<<<<< HEAD
-=======
-
-    public string GetRoomID()
-    {
-        return this.roomID;
-    }
-
-    
->>>>>>> caf5eea39c66689ec54811dd8796c5865f340cde
 }
