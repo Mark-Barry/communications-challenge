@@ -4,6 +4,9 @@ using System.Text;
 
 namespace Com_Challenge.src
 {
+    /// <summary>
+    /// Weapons Class contains 2 methods that begin with 'Name' and 'Damage'. These can be recognised and read in by JSON reader
+    /// </summary>
     class Weapon
     {
         private string name;
@@ -18,11 +21,13 @@ namespace Com_Challenge.src
             this.damage = damage;
         }
 
+        //Constructor
         public Weapon()
         {
 
         }
 
+        //Setters
         public void SetName(string name)
         {
             this.name = name;
@@ -33,6 +38,7 @@ namespace Com_Challenge.src
             this.damage = damage;
         }
 
+        //Getters
         public string GetName()
         {
             return this.name;
