@@ -4,10 +4,10 @@ using System.Text;
 
 namespace Com_Challenge.src
 {
-    class Menu
+    public static class Menu
     {
 
-        public string WelcomeFile()
+        public static string WelcomeFile()
         {
             bool confirm = false;
             string introPath = "";
@@ -21,7 +21,7 @@ namespace Com_Challenge.src
             }
             return introPath;
         }
-        public string PlayerFile()
+        public static string PlayerFile()
         {
             bool confirm = false;
             string playerPath = "";
@@ -34,7 +34,7 @@ namespace Com_Challenge.src
             }
             return playerPath;
         }
-        public string MapFile()
+        public static string MapFile()
         {
             bool confirm = false;
             string mapPath = "";
@@ -47,7 +47,7 @@ namespace Com_Challenge.src
             }
             return mapPath;
         }
-        public bool ConfirmFile(string link)
+        public static bool ConfirmFile(string link)
         {
             string decision = "";
             while (decision != "yes" || decision != "no")

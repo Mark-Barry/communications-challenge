@@ -9,7 +9,6 @@ namespace Com_Challenge.src
         private string name;
         private int damage;
         public string Name { get { return this.GetName(); } set { this.SetName(Name); } }
-        
         public int Damage { get { return this.GetDamage(); } set { this.SetDamage(Damage); } }
 
         public Weapon(string name, int damage)
