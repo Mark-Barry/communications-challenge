@@ -7,11 +7,13 @@ namespace Com_Challenge.src
     class Monster
     {
         private string name;
-        public string Name { get { return this.GetName(); } }
         private int damage;
-        public int Damage { get { return this.GetDamage(); } }
         private int health;
-        public int Health { get { return this.GetHealth(); } }
+        public string Name { get { return this.GetName(); } set { this.SetName(Name); } }
+        
+        public int Damage { get { return this.GetDamage(); } set { this.SetDamage(Damage); } }
+        
+        public int Health { get { return this.GetHealth(); } set { this.SetHealth(Health); } }
 
         public Monster(string name, int damage, int health)
         {
