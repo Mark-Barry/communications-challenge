@@ -1,6 +1,5 @@
 
 ﻿using Com_Challenge.Classes.Character;
-using Com_Challenge.src.Menu;
 using Com_Challenge.src;
 using Newtonsoft.Json;
 using System;
@@ -10,46 +9,55 @@ namespace Com_Challenge
 {
     class Program
     {
-<<<<<<< HEAD
         static void Main(string[] args)
         {
-            // prompt user for filepaths
-            string adventure_file = "";
-=======
-        static void Main(string[] args)
-        {
-            var rooms = new List<Room>();
+            //var rooms = new List<Room>();
+            //PlayerInput input = new PlayerInput();
+
+            ////input.directionInput();
+
+            //Console.WriteLine("Please, enter a file path and name that contains the Room objects: ");
+            //rooms = JSONHandler<Room>.FileReader(@"C:\Users\Administrator1\Desktop\challenge\rooms.txt");
+            //for (int i = 0; i < rooms.Count; i++)
+            //{
+            //    Console.WriteLine(rooms[i].Name);
+            //}
+            //string adventure_file;
+            //while (true)
+            //{
+            //    adventure_file = Menu.WelcomeFile();
+
+            //    if (Menu.ConfirmFile(adventure_file))
+            //    {
+            //        break;
+            //    }
+            //}
+
+            //// read in data from JSON
+
+            //JSONHandler<Adventure>.FileReader(adventure_file);
+
+
+            //// Enter starting room
+            var adventures = new List<Adventure>();
+            var Rooms = new List<Room>();
+            RoomHandler roomHandler = new RoomHandler();
+            Rooms = roomHandler.GetRooms(Menu.MapFile());
+            Console.WriteLine(Rooms.Count);
+
+            Player player = new Player();
+            string location = player.currenetLocation;
+            location = Rooms[0].roomID;
             PlayerInput input = new PlayerInput();
-
-            //input.directionInput();
-
-            Console.WriteLine("Please, enter a file path and name that contains the Room objects: ");
-            rooms = JSONHandler<Room>.FileReader(@"C:\Users\Administrator1\Desktop\challenge\rooms.txt");
-            for (int i = 0; i < rooms.Count; i++)
+            input.ResetInputList(Rooms[0].roomID, Rooms);
+            while (location != "win")
             {
-                Console.WriteLine(rooms[i].Name);
+                Console.WriteLine("You are currently in: " + location);
+                input.ResetInputList(location, Rooms);
+                location = input.directionInput();
             }
->>>>>>> a4615b53132ab0199c4d40d79e0d6994df0a0c62
-
-            while (true)
-            {
-                adventure_file = Menu.WelcomeFile();
-
-                if (Menu.ConfirmFile(adventure_file))
-                {
-                    break;
-                }
-            }
-
-            // read in data from JSON
-
-            JSONHandler<Adventure>.FileReader(adventure_file);
-
-
-            // Enter starting room
-
-
-
+            //MenuHandler menuHandler = new MenuHandler();
+            //menuHandler.displayMenu();
         }
     }
 }

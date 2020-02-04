@@ -7,12 +7,12 @@ namespace Com_Challenge.Classes.Character
 {
     class Player
     {   //verriables
-        private string name;
-        private string gender;
-        private int health;
-        private Inventory inventory;
-        private string currenetLocation;
-        private string previousLocation;
+        public string name;
+        public string gender;
+        public int health;
+        public Inventory inventory;
+        public string currenetLocation;
+        public string previousLocation;
 
         //properties so jason can access the verriables 
         public string Name { get { return this.GetName(); } set { this.SetName(Name); } }

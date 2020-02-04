@@ -5,10 +5,10 @@ using Com_Challenge.src;
 
 public class Room
 {   //verriables 
-    private string name;
-    private string description;
-    private List<string> exitList;
-    private string roomID;
+    public string name;
+    public string description;
+    public List<string> exitList;
+    public string roomID;
 
     //properties so jason can access the verriables 
     public string Name { get { return this.GetName(); } set { this.SetName(Name); } }

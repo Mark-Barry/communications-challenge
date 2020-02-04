@@ -12,13 +12,13 @@ namespace Com_Challenge.src
             Console.WriteLine("Welcome to the Text Based Game Creater\n");
             while (confirm != true)
             {
-                Console.WriteLine("Please enter the location of the file to use for the introduction: ");
+                Console.WriteLine("Please enter the location of the file to use for the Adventure: ");
                 introPath = Console.ReadLine();
-                confirm = ConfirmFile (introPath);
+                confirm = ConfirmFile(introPath);
             }
             return introPath;
         }
-                public static string MapFile()
+        public static string MapFile()
         {
             bool confirm = false;
             string mapPath = "";
@@ -55,7 +55,9 @@ namespace Com_Challenge.src
         }
 
 
-        public void StartAdventure(){
+        public static void StartAdventure()
+        {
 
         }
+    }
 }
