@@ -21,6 +21,7 @@ namespace Com_Challenge.src
         {
 
             string json = JsonConvert.SerializeObject(obj.ToArray());
+            Console.WriteLine(json);
 
             //write string to file
             System.IO.File.WriteAllText(filename, json);
