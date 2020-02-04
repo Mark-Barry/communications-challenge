@@ -14,7 +14,7 @@ namespace Com_Challenge
             var rooms = new List<Room>();
             PlayerInput input = new PlayerInput();
 
-            input.directionInput();
+            //input.directionInput();
 
             Console.WriteLine("Please, enter a file path and name that contains the Room objects: ");
             rooms = JSONHandler<Room>.FileReader(@"C:\Users\Administrator1\Desktop\challenge\rooms.txt");
