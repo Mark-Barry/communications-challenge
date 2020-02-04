@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Com_Challenge.src;
 
 namespace Com_Challenge.Classes.Character
 {
@@ -40,7 +41,7 @@ namespace Com_Challenge.Classes.Character
             this.gender = gender;
         }
 
-        public void SetHealth()
+        public void SetHealth(int health)
         {
             this.health = health;
         }
