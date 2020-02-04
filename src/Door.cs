@@ -9,12 +9,12 @@ namespace Com_Challenge.src
         private bool isLocked;
         private string key;
 
-        public Doors(bool isLocked, string key)
+        public Door(bool isLocked, string key)
         {
             this.isLocked = isLocked;
             this.key = key;
         }
-        public Doors()
+        public Door()
         {
             this.isLocked = false;
             this.key = "";
