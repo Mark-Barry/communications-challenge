@@ -51,4 +51,19 @@ public class Room
     {
         return this.name;
     }
+
+    public string GetDescription()
+    {
+        return this.description;
+    }
+
+    public List<string> GetExitList()
+    {
+        return this.exitList;
+    }
+
+    public string GetRoomID()
+    {
+        return this.roomID;
+    }
 }
