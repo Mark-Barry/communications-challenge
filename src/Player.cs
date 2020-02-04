@@ -10,9 +10,9 @@ namespace Com_Challenge.Classes.Character
         private string gender;
         private int health;
 
-        public string Name { get { return this.GetName(); } set { } }
-        public string Gender { get { return this.GetGender(); } set { } }
-        public int Health { get { return this.GetHealth(); } set { } }
+        public string Name { get { return this.GetName(); } set { this.SetName(Name); } }
+        public string Gender { get { return this.GetGender(); } set { this.SetGender(Gender); } }
+        public int Health { get { return this.GetHealth(); } set { this.SetHealth(Health); } }
 
 
         public Player(string name, string gender, int health)
@@ -36,6 +36,11 @@ namespace Com_Challenge.Classes.Character
         public void SetGender(string gender)
         {
             this.gender = gender;
+        }
+
+        public void SetHealth()
+        {
+            this.health = health;
         }
 
         //Getters 
