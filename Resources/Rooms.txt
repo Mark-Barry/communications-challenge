@@ -1,0 +1,38 @@
+﻿[
+  {
+    "roomID": "room1",
+    "name": "Room 1",
+    "description": "The room is cold and damp. The smell of mould,\nof old rotten wood hangs heavy in the air.\nThere are 2 doors here: \n",
+    "exitList": [
+      "room2",
+      "room3"
+    ]
+  },
+  {
+    "roomID": "room2",
+    "name": "Room 2",
+    "description": "Room 2 description",
+    "exitList": [
+      "room1"
+    ]
+  }
+  ,
+  {
+    "roomID": "room3",
+    "name": "Room 3",
+    "description": "Room 3 description",
+    "exitList": [
+      "room1",
+	  "room4"
+    ]
+  }
+  ,
+  {
+    "roomID": "room4",
+    "name": "Room 4",
+    "description": "Room 4 description",
+    "exitList": [
+      "room3"
+    ]
+  }
+]

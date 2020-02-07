@@ -1,0 +1,13 @@
+﻿[
+  {
+    "Id": "adventure1",
+    "Name": "Test Adventure",
+    "Description": "A new Adventure Awaits",
+    "exitList": [
+	  "room1",
+      "room2",
+      "room3",
+	  "room4"
+    ]
+  }
+]

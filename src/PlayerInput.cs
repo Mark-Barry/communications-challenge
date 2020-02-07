@@ -8,7 +8,6 @@ namespace Com_Challenge.src
     {
         List<string> InputList = new List<string>();
 
-
         public void ResetInputList(string roomId, List<Room> rooms)
         {
             foreach (var room in rooms)
@@ -16,6 +15,10 @@ namespace Com_Challenge.src
                 if (room.GetRoomID() == roomId)
                 {
                     InputList = room.GetExitList();
+					//InputList.Add("help");
+					//InputList.Add("search");
+					//InputList.Add("inventory");
+					//InputList.Add("exit");
                     break;
                 }
             }
@@ -29,7 +32,7 @@ namespace Com_Challenge.src
                 Console.Write(" "+option);
             }
             Console.WriteLine();
-            Console.Write("Enter a Direction:");
+            Console.Write("Enter a Direction or help:");
             string direction = Console.ReadLine();
             direction.ToLower();
 
