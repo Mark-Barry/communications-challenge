@@ -25,11 +25,11 @@ namespace Com_Challenge
 
 
 			string location = player.currenetLocation;
-			location = Rooms[0].roomID;
+			location = Rooms[0].RoomID;
 			string previousLocation = player.previousLocation;
 			previousLocation = "";
 
-			input.ResetInputList(Rooms[0].roomID, Rooms);
+			input.ResetInputList(Rooms[0].RoomID, Rooms);
 			Console.Clear();
 
 
@@ -40,9 +40,9 @@ namespace Com_Challenge
 			{
 				for (int i = 0; i < Rooms.Count; i++)
 				{
-					if (Rooms[i].roomID == location)
+					if (Rooms[i].RoomID == location)
 					{
-						Menu.WriteChars(Rooms[i].description, 100);
+						Menu.WriteChars(Rooms[i].Description, 100);
 					}
 				}
 				Console.WriteLine("You are currently in: " + location);
