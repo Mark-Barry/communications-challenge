@@ -10,5 +10,6 @@ namespace Com_Challenge.src
         public string Name { get; set; }
         public string  Description { get; set; }
         public List<String> RoomIds { get; set; }
+        public string WinningRoomId { get; set; }
     }
 }
