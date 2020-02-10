@@ -24,7 +24,7 @@ namespace Com_Challenge.src
             }
         }
 
-        public string directionInput()
+        public string directionInput(List<Room> rooms)
         {
             Console.Write("Exit options:");
             foreach (var option in InputList)
@@ -32,14 +32,14 @@ namespace Com_Challenge.src
                 Console.Write(" "+option);
             }
             Console.WriteLine();
-            Console.Write("Enter a Direction or help:");
+            Console.Write("Enter a Direction or exit:");
             string direction = Console.ReadLine();
             direction.ToLower();
 
             while (!InputList.Contains(direction) && direction != "exit")
             {
                 Console.WriteLine("Incorrect input! Please, try again!");
-                Console.WriteLine("Enter a Direction:");
+                Console.WriteLine("Enter a Direction or exit:");
                 direction = Console.ReadLine();
             }
             return direction;
