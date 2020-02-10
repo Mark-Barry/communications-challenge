@@ -28,6 +28,7 @@ public class Room
         this.exitList = new List<string>();
         this.exitList = exitList;
         this.items = new List<String>();
+        this.IsLocked = true;
     }
     //construter
     public Room()
