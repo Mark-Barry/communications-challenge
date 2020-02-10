@@ -47,7 +47,7 @@
   {
     "roomID": "room4",
     "name": "Room 4",
-    "description": "You will need to scale the walls of this huge hall to reach the door. \nClue: Use the snake's game companion",
+    "description": "Winner Winner Chicken Dinner!",
     "exitList": [
       "room3"
     ],
