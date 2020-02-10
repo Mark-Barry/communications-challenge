@@ -26,12 +26,6 @@
 	"Dragon Egg",
 	"Dragon Fire",
 	"Dragon Scales",
-	],
-	"monster": "Dragon",
-	"stats": [
-	"Name": "Dragon",
-	"Health":"57",
-	"Damage": "14"
 	]
   }
   ,

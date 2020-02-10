@@ -11,7 +11,7 @@ public class Room
     public List<string> exitList;
     public string roomID;
     public string key;
-    public List<Item> items;
+    public List<string> items;
 
     //properties so jason can access the verriables 
     public string Name { get { return this.GetName(); } set { this.SetName(Name); } }
@@ -26,7 +26,6 @@ public class Room
         this.description = description;
         this.exitList = new List<string>();
         this.exitList = exitList;
-        this.items = new List<Item>();
     }
     //construter
     public Room()
@@ -58,7 +57,7 @@ public class Room
         this.key = clue;
     }
 
-    public void SetItems(List<Item> items)
+    public void SetItems(List<string> items)
     {
         this.items = items;
     }
@@ -89,7 +88,7 @@ public class Room
         return this.key;
     }
 
-    public List<Item> GetItems()
+    public List<string> GetItems()
     {
         return this.items;
     }

@@ -13,6 +13,8 @@ namespace Com_Challenge
 	{
 		static void Main(string[] args)
 		{
+
+            Console.Title = "Text base game engine";
 			//// Enter starting room
 			PlayerInput input = new PlayerInput();
 			RoomHandler roomHandler = new RoomHandler();
