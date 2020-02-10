@@ -20,8 +20,8 @@ namespace Com_Challenge
 			var Rooms = new List<Room>();
 
 
-			adventures = JSONHandler<Adventure>.FileReader("./Adventures/" + Menu.WelcomeFile());
-			Rooms = roomHandler.GetRooms("./Rooms/" + Menu.MapFile());
+			adventures = JSONHandler<Adventure>.FileReader("./Resources/" + Menu.WelcomeFile());
+			Rooms = roomHandler.GetRooms("./Resources/" + Menu.MapFile());
 
 
 			string location = player.currenetLocation;
