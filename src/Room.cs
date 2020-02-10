@@ -6,12 +6,12 @@ using Com_Challenge.src;
 
 public class Room
 {   //verriables 
-    private string name;
-    private string description;
-    private List<string> exitList;
-    private string roomID;
-    private string key;
-    private List<Item> items;
+    public string name;
+    public string description;
+    public List<string> exitList;
+    public string roomID;
+    public string key;
+    public List<Item> items;
 
     //properties so jason can access the verriables 
     public string Name { get { return this.GetName(); } set { this.SetName(Name); } }
@@ -58,9 +58,9 @@ public class Room
         this.key = clue;
     }
 
-    public void SetItems(Item item)
+    public void SetItems(List<Item> items)
     {
-        this.items.Add(item);
+        this.items = items;
     }
 
     //getters
