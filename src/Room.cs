@@ -10,7 +10,7 @@ public class Room
     private string description;
     private List<string> exitList;
     private string roomID;
-    private string clue;
+    private string key;
     private List<Item> items;
 
     //properties so jason can access the verriables 
@@ -18,7 +18,7 @@ public class Room
     public string Description { get { return this.GetDescription(); } set { this.SetDescription(Description); } }
     public List<string> ExitList { get { return this.GetExitList(); } set { this.SetExitList(ExitList); } }
     public string RoomID { get { return this.GetRoomID(); } set { this.SetRoomID(RoomID); } }
-    public string Clue { get { return this.GetClue(); } set { this.SetClue(Clue); } }
+    public string Key { get { return this.GetClue(); } set { this.SetClue(Key); } }
 
     public Room(string name, string description, List<string> exitList)
     {
@@ -54,7 +54,7 @@ public class Room
 
     public void SetClue(string clue)
     {
-        this.clue = clue;
+        this.key = clue;
     }
 
     public void SetItems(Item item)
@@ -85,7 +85,7 @@ public class Room
 
     public string GetClue() 
     {
-        return this.clue;
+        return this.key;
     }
 
     public List<Item> GetItems()
