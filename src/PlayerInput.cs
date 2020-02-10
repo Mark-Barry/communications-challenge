@@ -51,16 +51,15 @@ namespace Com_Challenge.src
             {
                 if (input.Split(" ").Last() == room.Key)
                 {
-                    return true;
+                    room.IsLocked = false;
+                    Console.WriteLine("Room unlocked!");
                 }
             }
 
             if (input.ToLower() == "search")
             {
-                room.GetItems();
+                Console.WriteLine(room.GetItems());
             }
-
-            return false;
         }
     }
 }
