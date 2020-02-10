@@ -1,6 +1,6 @@
-﻿using System;
+﻿using System.Linq;
+using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Com_Challenge.src
 {
@@ -44,6 +44,24 @@ namespace Com_Challenge.src
             }
             return direction;
         }
+
+        public bool actionInput(Room room, string input)
+        {
+            if (input.ToLower().Contains("use"))
+            {
+                if (input.Split(" ").Last() == room.Key)
+                {
+                    return true;
+                }
+            }
+
+            if (input.ToLower() == "search")
+            {
+                room.GetItems();
+            }
+
+            return false;
+        }
     }
-}   
+}
 
