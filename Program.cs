@@ -3,6 +3,8 @@ using Com_Challenge.Classes.Character;
 using Com_Challenge.src;
 using Newtonsoft.Json;
 using System;
+using System.IO;
+using System.Reflection;
 using System.Collections.Generic;
 
 namespace Com_Challenge
@@ -20,8 +22,8 @@ namespace Com_Challenge
 			var Rooms = new List<Room>();
 
 
-			adventures = JSONHandler<Adventure>.FileReader("./Resources/" + Menu.WelcomeFile());
-			Rooms = roomHandler.GetRooms("./Resources/" + Menu.MapFile());
+			adventures = JSONHandler<Adventure>.FileReader(Menu.WelcomeFile());
+			Rooms = roomHandler.GetRooms(Menu.MapFile());
 
 
 			string location = player.currenetLocation;
