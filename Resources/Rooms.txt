@@ -17,7 +17,7 @@
   {
     "roomID": "room2",
     "name": "Room 2",
-    "description": "This is a cavernous cave. \nClue: Find the weapon with a hilt to open the next door. ",
+    "description": "This is a cavernous cave. There is a single hatch in the ceiling above. \nClue: Find the weapon with a hilt to open the next door. ",
     "exitList": [
       "room1"
     ],
@@ -32,7 +32,7 @@
   {
     "roomID": "room3",
     "name": "Room 3",
-    "description": "Be very careful in this room. \nYou are about to enter the dragons lair. \nClue: There is a real 'element' of danger to this place",
+    "description": "Be very careful in this room. \nYou are about to enter the dragons lair. There are two doors. \nClue: There is a real 'element' of danger to this place",
     "exitList": [
       "room1",
 	  "room4"
@@ -48,7 +48,7 @@
   {
     "roomID": "room4",
     "name": "Room 4",
-    "description": "You will need to scale the walls of this huge hall to reach the two doors. \nClue: Use the snake's game companion",
+    "description": "You will need to scale the walls of this huge hall to reach the door. \nClue: Use the snake's game companion",
     "exitList": [
       "room3"
     ],
