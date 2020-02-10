@@ -26,6 +26,7 @@ public class Room
         this.description = description;
         this.exitList = new List<string>();
         this.exitList = exitList;
+        this.items = new List<Item>();
     }
     //construter
     public Room()
