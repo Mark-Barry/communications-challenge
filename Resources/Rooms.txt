@@ -27,7 +27,6 @@
 	"Dragon Fire",
 	"Dragon Scales",
 	]
-	
   },
   {
     "roomID": "room3",
@@ -42,12 +41,6 @@
 	"Ladder",
 	"Rope",
 	"Vine"
-	],
-	"monster": "Dragon",
-	"stats": [
-	"Name": "Dragon",
-	"Health":"57",
-	"Damage": "14"
 	]
   }
   ,
