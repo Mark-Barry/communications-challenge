@@ -13,6 +13,8 @@ namespace Com_Challenge
 	{
 		static void Main(string[] args)
 		{
+
+            Console.Title = "Text base game engine";
 			//// Enter starting room
 			PlayerInput input = new PlayerInput();
 			RoomHandler roomHandler = new RoomHandler();
@@ -26,10 +28,10 @@ namespace Com_Challenge
 			Rooms = roomHandler.GetRooms(Menu.MapFile());
 
 
-			string location = player.currenetLocation;
-			location = Rooms[0].RoomID;
-			string previousLocation = player.previousLocation;
-			previousLocation = "";
+			string location = Rooms[0].RoomID;
+            player.currenetLocation = location;
+			string previousLocation = "";
+            player.previousLocation = previousLocation;
 
 			input.ResetInputList(Rooms[0].RoomID, Rooms);
 			Console.Clear();

@@ -6,12 +6,12 @@ using Com_Challenge.src;
 
 public class Room
 {   //verriables 
-    private string name;
-    private string description;
-    private List<string> exitList;
-    private string roomID;
-    private string key;
-    private List<Item> itemsList;
+    public string name;
+    public string description;
+    public List<string> exitList;
+    public string roomID;
+    public string key;
+    public List<Item> items;
 
     //properties so jason can access the verriables 
     public string Name { get { return this.GetName(); } set { this.SetName(Name); } }
@@ -19,7 +19,6 @@ public class Room
     public List<string> ExitList { get { return this.GetExitList(); } set { this.SetExitList(ExitList); } }
     public string RoomID { get { return this.GetRoomID(); } set { this.SetRoomID(RoomID); } }
     public string Key { get { return this.GetClue(); } set { this.SetClue(Key); } }
-    public List<Item> ItemsList { get { return this.GetItems(); } set { this.SetItems(ItemsList); } }
 
     public Room(string name, string description, List<string> exitList)
     {
@@ -27,7 +26,7 @@ public class Room
         this.description = description;
         this.exitList = new List<string>();
         this.exitList = exitList;
-        this.itemsList = new List<Item>();
+        this.items = new List<Item>();
     }
     //construter
     public Room()
@@ -59,18 +58,9 @@ public class Room
         this.key = clue;
     }
 
-    public void SetItems(List<Item> items)
+    public void SetItems(List<Item> itemsList)
     {
-        foreach(Item item in items)
-        {
-            this.ItemsList.Add(item);
-        }
-    }
-
-    // Add each item individually
-    public void AddItem(Item item)
-    {
-        this.ItemsList.Add(item);
+        this.items = itemsList;
     }
 
     //getters
@@ -99,7 +89,7 @@ public class Room
         return this.key;
     }
 
-    public List<Item> GetItems()
+    public List<string> GetItems()
     {
         return this.items;
     }
