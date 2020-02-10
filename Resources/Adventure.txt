@@ -3,11 +3,12 @@
     "Id": "adventure1",
     "Name": "Test Adventure",
     "Description": "A new Adventure Awaits",
-    "exitList": [
+    "RoomIds": [
 	  "room1",
       "room2",
       "room3",
 	  "room4"
-    ]
+    ],
+	"WinningRoomId": "room3"
   }
 ]

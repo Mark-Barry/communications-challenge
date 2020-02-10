@@ -40,21 +40,30 @@ namespace Com_Challenge
 			Console.Title = adventures[0].Name;
 			Console.WriteLine("Welcome to " + adventures[0].Name);
 			Menu.WriteChars(adventures[0].Description, 100);
-			while (location != "exit")
+            string previousRoomName = "";
+
+            while (location != "exit")
 			{
 				for (int i = 0; i < Rooms.Count; i++)
 				{
 					if (Rooms[i].RoomID == location)
 					{
 						Menu.WriteChars(Rooms[i].Description, 100);
-					}
-				}
-				Console.WriteLine("You are currently in: " + location);
-				input.ResetInputList(location, Rooms);
+                        previousRoomName = Rooms[i].Name;
+                    }
+                    
+                }
+                Console.WriteLine("You are currently in: " + previousRoomName);
+                input.ResetInputList(location, Rooms);
 				previousLocation = location;
-				location = input.directionInput();
+				location = input.directionInput(Rooms);
 				Console.Clear();
-				Console.WriteLine("You just came from: " + previousLocation);
+                if (location == adventures[0].WinningRoomId)
+                {
+                    Console.WriteLine("Congratulations! You won!");
+                    break;
+                }
+				Console.WriteLine("You just came from: " + previousRoomName);
 			}
 		}
 	}
