@@ -29,7 +29,7 @@ namespace Com_Challenge.src
             Console.Write("Exit options:");
             foreach (var option in InputList)
             {
-                Console.Write("");
+                Console.Write(" "+option);
             }
             Console.WriteLine();
             Console.Write("Enter a Direction or exit:");
