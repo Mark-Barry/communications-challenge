@@ -20,7 +20,7 @@ public class Room
     public List<string> ExitList { get { return this.GetExitList(); } set { this.SetExitList(ExitList); } }
     public string RoomID { get { return this.GetRoomID(); } set { this.SetRoomID(RoomID); } }
     public string Key { get { return this.GetClue(); } set { this.SetClue(Key); } }
-    public List<Item> Items { get { return this.GetItems(); } set { this.SetItems(items); } }
+    public List<string> Items { get { return this.GetItems(); } set { this.SetItems(items); } }
 
     public Room(string name, string description, List<string> exitList)
     {
@@ -93,7 +93,7 @@ public class Room
         return this.key;
     }
 
-    public List<Item> GetItems()
+    public List<string> GetItems()
     {
         return this.items;
     }

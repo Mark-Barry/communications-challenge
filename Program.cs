@@ -57,7 +57,12 @@ namespace Com_Challenge
                 input.ResetInputList(location, Rooms);
 				previousLocation = location;
 				location = input.directionInput(Rooms);
+                //Console.WriteLine("Select action: type use or search");
+                //string action = Console.ReadLine(); 
+                //input.actionInput(location, action);
+               
 				Console.Clear();
+                
                 if (location == adventures[0].WinningRoomId)
                 {
                     Menu.WriteChars("You entered:" + location,100);
