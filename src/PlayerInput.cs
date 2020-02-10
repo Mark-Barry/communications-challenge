@@ -1,6 +1,6 @@
-﻿using System;
+﻿using System.Linq;
+using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Com_Challenge.src
 {
@@ -44,6 +44,23 @@ namespace Com_Challenge.src
             }
             return direction;
         }
+
+        public void actionInput(Room room, string input)
+        {
+            if (input.ToLower().Contains("use"))
+            {
+                if (input.Split(" ").Last() == room.Key)
+                {
+                    room.IsLocked = false;
+                    Console.WriteLine("Room unlocked!");
+                }
+            }
+
+            if (input.ToLower() == "search")
+            {
+                Console.WriteLine(room.GetItems());
+            }
+        }
     }
-}   
+}
 
