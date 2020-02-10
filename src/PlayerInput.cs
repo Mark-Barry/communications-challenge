@@ -45,7 +45,7 @@ namespace Com_Challenge.src
             return direction;
         }
 
-        public bool actionInput(Room room, string input)
+        public void actionInput(Room room, string input)
         {
             if (input.ToLower().Contains("use"))
             {
