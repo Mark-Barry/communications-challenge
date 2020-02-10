@@ -5,7 +5,7 @@ using Com_Challenge.src;
 
 
 public class Room
-{   //verriables 
+{   //verriables
     public string name;
     public string description;
     public List<string> exitList;
@@ -13,12 +13,13 @@ public class Room
     public string key;
     public List<Item> items;
 
-    //properties so jason can access the verriables 
+    //properties so jason can access the verriables
     public string Name { get { return this.GetName(); } set { this.SetName(Name); } }
     public string Description { get { return this.GetDescription(); } set { this.SetDescription(Description); } }
     public List<string> ExitList { get { return this.GetExitList(); } set { this.SetExitList(ExitList); } }
     public string RoomID { get { return this.GetRoomID(); } set { this.SetRoomID(RoomID); } }
     public string Key { get { return this.GetClue(); } set { this.SetClue(Key); } }
+    public List<Item> Items { get { return this.GetItems(); } set { this.SetItems(items); } }
 
     public Room(string name, string description, List<string> exitList)
     {
@@ -32,7 +33,8 @@ public class Room
     public Room()
     {
     }
-    //setters 
+
+    //setters
     public void SetName(string name)
     {
         this.name = name;
@@ -89,7 +91,7 @@ public class Room
         return this.key;
     }
 
-    public List<string> GetItems()
+    public List<Item> GetItems()
     {
         return this.items;
     }
