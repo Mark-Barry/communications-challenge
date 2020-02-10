@@ -26,15 +26,9 @@
 	"Dragon Egg",
 	"Dragon Fire",
 	"Dragon Scales",
-	],
-	"monster": "Dragon",
-	"stats": [
-	"Name": "Dragon",
-	"Health":"57",
-	"Damage": "14"
 	]
-  }
-  ,
+	
+  },
   {
     "roomID": "room3",
     "name": "Room 3",
@@ -48,6 +42,12 @@
 	"Ladder",
 	"Rope",
 	"Vine"
+	],
+	"monster": "Dragon",
+	"stats": [
+	"Name": "Dragon",
+	"Health":"57",
+	"Damage": "14"
 	]
   }
   ,
