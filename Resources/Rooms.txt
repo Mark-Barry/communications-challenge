@@ -6,33 +6,57 @@
     "exitList": [
       "room2",
       "room3"
-    ]
+    ],
+	"key": "",
+	"items": [
+	"Axe",
+	"Hammer",
+	"Sword"
+	]
   },
   {
     "roomID": "room2",
     "name": "Room 2",
-    "description": "Room 2 description",
+    "description": "This is a cavernous cave. There is a single hatch in the ceiling above. \nClue: Find the weapon with a hilt to open the next door. ",
     "exitList": [
       "room1"
-    ]
+    ],
+	"key": "Sword",
+	"items": [
+	"Dragon Egg",
+	"Dragon Fire",
+	"Dragon Scales",
+	]
   }
   ,
   {
     "roomID": "room3",
     "name": "Room 3",
-    "description": "Room 3 description",
+    "description": "Be very careful in this room. \nYou are about to enter the dragons lair. There are two doors. \nClue: There is a real 'element' of danger to this place",
     "exitList": [
       "room1",
 	  "room4"
-    ]
+    ],
+	"key": "Dragon Fire",
+	"items": [
+	"Ladder",
+	"Rope",
+	"Vine"
+	]
   }
   ,
   {
     "roomID": "room4",
     "name": "Room 4",
-    "description": "Room 4 description",
+    "description": "You will need to scale the walls of this huge hall to reach the door. \nClue: Use the snake's game companion",
     "exitList": [
       "room3"
-    ]
+    ],
+	"key": "Ladder",
+	"items": [
+	"Unicorn Hair",
+	"Hippogriff Claw",
+	"Lucky Leprechaun Foot"
+	]
   }
 ]
