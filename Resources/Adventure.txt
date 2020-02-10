@@ -9,6 +9,6 @@
       "room3",
 	  "room4"
     ],
-	"WinningRoomId": "room3"
+	"WinningRoomId": "room4"
   }
 ]

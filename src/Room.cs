@@ -12,6 +12,7 @@ public class Room
     public string roomID;
     public string key;
     public List<string> items;
+    public bool IsLocked { get; set; }
 
     //properties so jason can access the verriables 
     public string Name { get { return this.GetName(); } set { this.SetName(Name); } }

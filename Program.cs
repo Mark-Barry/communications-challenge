@@ -60,6 +60,8 @@ namespace Com_Challenge
 				Console.Clear();
                 if (location == adventures[0].WinningRoomId)
                 {
+                    Menu.WriteChars("You entered:" + location,100);
+                    Menu.WriteChars(Rooms.Find(f => f.roomID == location).description,100);
                     Console.WriteLine("Congratulations! You won!");
                     break;
                 }
